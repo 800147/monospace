@@ -433,15 +433,15 @@ input[type="radio"]:checked::before {
   width: 1ch;
   height: 1lh;
   pointer-events: none;
-  backdrop-filter: var(--custom-cursor) invert(100%);
-  -webkit-backdrop-filter: var(--custom-cursor) invert(100%);
-  transform: var(--custom-cursor)
+  backdrop-filter: var(--custom-cursor-switch) invert(100%);
+  -webkit-backdrop-filter: var(--custom-cursor-switch) invert(100%);
+  transform: var(--custom-cursor-switch)
     translate(calc(var(--cursorX) - 0.5ch), calc(var(--cursorY) - 0.5lh));
 }
 
 @supports (top: round(100%, 1lh)) {
   #cursor {
-    transform: var(--custom-cursor)
+    transform: var(--custom-cursor-switch)
       translate(
         round(down, var(--cursorX), 1ch),
         round(down, var(--cursorY), 1lh)
@@ -451,5 +451,5 @@ input[type="radio"]:checked::before {
 }
 
 * {
-  cursor: var(--custom-cursor) none;
+  cursor: var(--custom-cursor-switch) none;
 }

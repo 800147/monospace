@@ -9,7 +9,7 @@ const showCursor = ({ clientX, clientY } = {}) => {
   const x = lastClientX - bodyX;
   const y = lastClientY - bodyY;
 
-  document.documentElement.style = `--cursorX: ${x}px; --cursorY: ${y}px; --custom-cursor: ;`;
+  document.documentElement.style = `--cursorX: ${x}px; --cursorY: ${y}px; --custom-cursor-switch: ;`;
 };
 
 const hideCursor = () => {
