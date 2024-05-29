@@ -10,6 +10,11 @@
       rel="stylesheet"
       href="https://800147.github.io/document/src/document.css"
     />
+    <script type="module">
+      // https://highlightjs.org/usage/
+      import hljs from "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/es/highlight.min.js";
+      hljs.highlightAll();
+    </script>
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <link rel="icon" type="image/png" href="./favicon.png" />
   </head>
@@ -29,6 +34,28 @@
         interface. Monospace.css is made just for fun — it wasn't intended to
         use it in production.
       </p>
+
+      <h2>Guide</h2>
+
+      <p>
+        To try it out you should add a stylesheet link to
+        "<code>https://800147.github.io/monospace/src/monospace.css</code>". And
+        that's it!
+      </p>
+      <pre><code class="language-html">&lt;!DOCTYPE html>
+&lt;html lang="en">
+  &lt;head>
+    &lt;meta charset="UTF-8" />
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    &lt;title>Monospace.css example&lt;/title>
+    &lt;meta name="color-scheme" content="light dark" />
+    &lt;link rel="stylesheet" href="https://800147.github.io/monospace/src/monospace.css" />
+  &lt;/head>
+  &lt;body>
+    &lt;h1>Title&lt;/h1>
+    &lt;p>Some text&lt;/p>
+  &lt;/body>
+&lt;/html></code></pre>
 
       <h3>Supported tags</h3>
       <p>Here is the list of supported tags:</p>
