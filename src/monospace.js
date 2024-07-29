@@ -1,7 +1,23 @@
 let lastClientX;
 let lastClientY;
+let cursorVisible = false;
 
-const showCursor = ({ clientX, clientY } = {}) => {
+const showCursor = (e = {}) => {
+  const { clientX, clientY, pointerType } = e;
+
+  if (pointerType === "mouse") {
+    cursorVisible = true;
+  }
+
+  if (pointerType && pointerType !== "mouse") {
+    cursorVisible = false;
+    document.documentElement.style = "";
+  }
+
+  if (!cursorVisible) {
+    return;
+  }
+
   lastClientX = clientX ?? lastClientX;
   lastClientY = clientY ?? lastClientY;
 
@@ -13,6 +29,7 @@ const showCursor = ({ clientX, clientY } = {}) => {
 };
 
 const hideCursor = () => {
+  cursorVisible = false;
   document.documentElement.style = "";
 };
 
@@ -23,8 +40,8 @@ const onScroll = (e) => {
 
 const init = () => {
   document.addEventListener("scroll", onScroll);
-  document.addEventListener("mousemove", showCursor);
-  document.addEventListener("mouseout", hideCursor);
+  document.addEventListener("pointermove", showCursor);
+  document.addEventListener("pointerout", hideCursor);
 };
 
 document.addEventListener("DOMContentLoaded", init);

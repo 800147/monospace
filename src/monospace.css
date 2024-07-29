@@ -75,6 +75,7 @@ h1 {
 
 h1::before {
   display: block;
+  pointer-events: none;
   position: absolute;
   inset: 0lh 1ch 0lh 0ch;
   overflow: hidden;
@@ -86,6 +87,7 @@ h1::before {
 
 h1::after {
   display: block;
+  pointer-events: none;
   position: absolute;
   inset: auto 0ch 0lh 1ch;
   overflow: hidden;
@@ -107,6 +109,7 @@ h3 {
 h2::after,
 h3::after {
   display: block;
+  pointer-events: none;
   position: absolute;
   height: 1lh;
   left: 0ch;
@@ -163,6 +166,7 @@ hr::before {
   overflow: hidden;
   white-space: nowrap;
   display: block;
+  pointer-events: none;
   width: 100%;
 }
 
@@ -184,6 +188,7 @@ button {
 button::before {
   content: "< ";
   display: block;
+  pointer-events: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -192,6 +197,7 @@ button::before {
 button::after {
   content: " >";
   display: block;
+  pointer-events: none;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -216,6 +222,7 @@ pre {
 
 pre > code {
   display: block;
+  pointer-events: none;
   padding-left: 4ch;
   overflow: hidden;
   width: max-content;
@@ -225,6 +232,7 @@ pre > code {
 pre > code::before {
   content: "01|02|03|04|05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|";
   display: block;
+  pointer-events: none;
   width: 3ch;
   white-space: normal;
   word-break: break-all;
@@ -260,6 +268,7 @@ table {
 table::before {
   content: "|\A|\A|\A|\A|\A|\A|\A|\A|\A|\A|\A|\A|\A|\A|\A|\A|\A|\A|\A|\A|\A|\A|\A|\A|\A|\A|\A|\A|\A|";
   display: block;
+  pointer-events: none;
   white-space: pre;
   position: absolute;
   top: 0;
@@ -272,6 +281,7 @@ table::before {
 table::after {
   content: "+";
   display: block;
+  pointer-events: none;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -283,6 +293,7 @@ tr {
 
 tr::after {
   content: "+";
+  pointer-events: none;
   position: absolute;
   background-color: var(--bgcolor);
 }
@@ -298,6 +309,7 @@ tr::after {
 
 :is(th, td)::before {
   display: block;
+  pointer-events: none;
   position: absolute;
   top: 0lh;
   right: 0ch;
@@ -319,6 +331,7 @@ tr::after {
 
 :is(th, td):not(thead *):is(tr:last-child > *)::after {
   display: block;
+  pointer-events: none;
   position: absolute;
   right: 0ch;
   bottom: 0lh;
@@ -344,6 +357,7 @@ figure {
 
 figure::before {
   display: block;
+  pointer-events: none;
   position: absolute;
   top: 0lh;
   right: 1ch;
@@ -357,6 +371,7 @@ figure::before {
 
 figure::after {
   display: block;
+  pointer-events: none;
   position: absolute;
   right: 0ch;
   bottom: 0lh;
@@ -379,6 +394,7 @@ blockquote {
 
 blockquote::before {
   display: block;
+  pointer-events: none;
   position: absolute;
   top: 0lh;
   bottom: 0lh;
