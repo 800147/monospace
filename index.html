@@ -17,6 +17,18 @@
     </script>
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <link rel="icon" type="image/png" href="./favicon.png" />
+    <style>
+      @media (prefers-color-scheme: light) {
+        [data-color-scheme="dark"] {
+          display: none !important;
+        }
+      }
+      @media (prefers-color-scheme: dark) {
+        [data-color-scheme="light"] {
+          display: none !important;
+        }
+      }
+    </style>
   </head>
   <body class="Document">
     <nav class="Document-Breadcrumbs">
@@ -41,7 +53,7 @@
             media="(prefers-color-scheme: dark)"
           />
           <source srcset="monospace-css.png, monospace-css_2x.png 2x" />
-          <img src="monospace-css.png" />
+          <img src="monospace-css.png" width="640" height="480" />
         </picture>
       </figure>
 
@@ -70,6 +82,33 @@
     &lt;p>Some text&lt;/p>
   &lt;/body>
 &lt;/html></code></pre>
+
+      <h3>Cursor view</h3>
+
+      <figure>
+        <video
+          muted
+          autoplay
+          loop
+          width="640"
+          height="380"
+          data-color-scheme="light"
+        >
+          <source src="cursor.webm" type="video/webm" />
+          video is not supported :(
+        </video>
+        <video
+          muted
+          autoplay
+          loop
+          width="640"
+          height="380"
+          data-color-scheme="dark"
+        >
+          <source src="cursor_dark.webm" type="video/webm" />
+          video is not supported :(
+        </video>
+      </figure>
 
       <h3>Supported tags</h3>
       <p>Here is the list of supported tags:</p>
