@@ -41,26 +41,25 @@ main {
 
 h1,
 h2,
-h3 {
-  font: var(--font);
-  max-width: max-content;
-  margin: 1lh 0;
-}
-
+h3,
 h4,
 h5,
 h6 {
   font: var(--font);
-  margin: 1lh 0;
+  max-width: max-content;
+  margin: 2lh 0 1lh;
+}
+
+h4 {
   padding: 0 3ch;
 }
 
 h5 {
-  padding-left: 5ch;
+  padding: 0 3ch 0 5ch;
 }
 
 h6 {
-  padding-left: 7ch;
+  padding: 0 3ch 0 7ch;
 }
 
 h1 {
@@ -155,7 +154,7 @@ ul ul {
 
 hr {
   border: none;
-  margin: 1lh 0;
+  margin: 2lh 0 1lh;
   padding: 0 7ch;
   color: var(--color);
 }
@@ -172,10 +171,12 @@ hr::before {
 
 /* Button */
 
-button {
+button,
+.Button {
   appearance: none;
   background-color: #0aa;
   display: inline-block;
+  text-decoration: none;
   border: none;
   font: var(--font);
   color: #000;
@@ -185,7 +186,7 @@ button {
   position: relative;
 }
 
-button::before {
+:is(button, .Button)::before {
   content: "< ";
   display: block;
   pointer-events: none;
@@ -194,7 +195,7 @@ button::before {
   left: 0;
 }
 
-button::after {
+:is(button, .Button)::after {
   content: " >";
   display: block;
   pointer-events: none;
@@ -466,6 +467,10 @@ input[type="radio"]:checked::before {
   }
 }
 
-* {
+body {
   cursor: var(--custom-cursor-switch) none;
+}
+
+body * {
+  cursor: var(--custom-cursor-switch) unset;
 }
