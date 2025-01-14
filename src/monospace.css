@@ -450,23 +450,25 @@ input[type="radio"]:checked::before {
   width: 1ch;
   height: 1lh;
   pointer-events: none;
-  backdrop-filter: var(--custom-cursor-switch) invert(100%);
-  -webkit-backdrop-filter: var(--custom-cursor-switch) invert(100%);
-  transform: var(--custom-cursor-switch)
-    translate(calc(var(--cursorX) - 0.5ch), calc(var(--cursorY) - 0.5lh));
+  backdrop-filter: invert(100%);
+  -webkit-backdrop-filter: invert(100%);
+  transform: translate(
+    calc(var(--cursorX, 0ch) - 0.5ch),
+    calc(var(--cursorY, -2lh) - 0.5lh)
+  );
+  z-index: 9999;
 }
 
 @supports (top: round(100%, 1lh)) {
   #cursor {
-    transform: var(--custom-cursor-switch)
-      translate(
-        round(down, var(--cursorX), 1ch),
-        round(down, var(--cursorY), 1lh)
-      );
-    z-index: 9999;
+    transform: translate(
+      round(down, var(--cursorX, 0ch), 1ch),
+      round(down, var(--cursorY, -2lh), 1lh)
+    );
   }
 }
 
+:root,
 body {
   cursor: var(--custom-cursor-switch) none;
 }
